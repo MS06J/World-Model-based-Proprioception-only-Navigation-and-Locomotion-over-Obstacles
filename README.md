@@ -1,10 +1,5 @@
-<h1>WMP</h1>
-
-Code for the paper: 
-### World Model-based Perception for Visual Legged Locomotion
-[Hang Lai](https://apex.sjtu.edu.cn/members/laihang@apexlab.org), [Jiahang Cao](https://apex.sjtu.edu.cn/members/jhcao@apexlab.org), [JiaFeng Xu](https://scholar.google.com/citations?user=GPmUxtIAAAAJ&hl=zh-CN&oi=ao), [Hongtao Wu](https://scholar.google.com/citations?user=7u0TYgIAAAAJ&hl=zh-CN&oi=ao), [Yunfeng Lin](https://apex.sjtu.edu.cn/members/yflin@apexlab.org), [Tao Kong](https://www.taokong.org/), [Yong Yu](https://scholar.google.com.hk/citations?user=-84M1m0AAAAJ&hl=zh-CN&oi=ao), [Weinan Zhang](https://wnzhang.net/) 
-
-### [🌐 Project Website](https://wmp-loco.github.io/) | [📄 Paper](https://arxiv.org/abs/2409.16784)
+<h1>World model-based Proprioception-only Navigation
+and Locomotion over Obstacles</h1>
    
 ## Requirements
 1. Create a new python virtual env with python 3.6, 3.7 or 3.8 (3.8 recommended)
@@ -24,14 +19,13 @@ Code for the paper:
 
 ## Training
 ```
-python legged_gym/scripts/train.py --task=a1_amp --headless --sim_device=cuda:0
+python legged_gym/scripts/train.py --task=go2_baseline --headless
 ```
-Training takes about 23G GPU memory, and at least 10k iterations recommended.
 
 ## Visualization
 **Please make sure you have trained the WMP before**
 ```
-python legged_gym/scripts/play.py --task=a1_amp --sim_device=cuda:0 --terrain=climb
+python legged_gym/scripts/play.py --task=go2_baseline
 ```
 
 
@@ -44,17 +38,3 @@ We thank the authors of the following projects for making their code open source
 - [AMP_for_hardware](https://github.com/Alescontrela/AMP_for_hardware)
 - [parkour](https://github.com/ZiwenZhuang/parkour/tree/main)
 - [extreme-parkour](https://github.com/chengxuxin/extreme-parkour)
-
-
-
-## Citation
-
-If you find this project helpful, please consider citing our paper:
-```
-@article{lai2024world,
-  title={World Model-based Perception for Visual Legged Locomotion},
-  author={Lai, Hang and Cao, Jiahang and Xu, Jiafeng and Wu, Hongtao and Lin, Yunfeng and Kong, Tao and Yu, Yong and Zhang, Weinan},
-  journal={arXiv preprint arXiv:2409.16784},
-  year={2024}
-}
-```
